@@ -20,8 +20,7 @@ A web app that provides users with air quality rates and pollutant concentration
     
  
 ## Live Demo Link
-
-    Live Demo Here :   [Air-Quality](air-quality-ha.netlify.app)
+ Live Demo Here :   [Air-Quality](https://air-quality-ha.netlify.app)
 
 ### Prerequisites
 
