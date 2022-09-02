@@ -60,13 +60,13 @@ function Cities() {
         <p>CITIES BY STATE</p>
         <select onChange={handleSelect} className="filter">
           {states.map((s) => (
-            <option key={s.state_name} value={s.state_name}>{s.state_name}</option>
+            <option Key={s.state_name} value={s.state_name}>{s.state_name}</option>
           ))}
           ;
         </select>
       </div>
       <div className="cities">
-        {cities.length > 0 ? cities.map((c) => (c === 'init' ? <p key="m" className="message">Select Your State</p> : (
+        {cities.length > 0 ? cities.map((c) => (c === 'init' ? <p Key="m" className="message">Select Your State</p> : (
           <Link key={c.id} className="city-card" to={`/Details/${c.coord.lat}/${c.coord.lon}`} state={c}>
             <p className="city-name">{c.name}</p>
             <div className="city-info">
