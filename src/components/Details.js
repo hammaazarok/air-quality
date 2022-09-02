@@ -33,7 +33,7 @@ function Details() {
   };
 
   useEffect(() => {
-    fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=daa552ce23205ff48e971f0523fe9102`)
+    fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=daa552ce23205ff48e971f0523fe9102`)
       .then((res) => res.json())
       .then((json) => {
         dispatch(LoadDetails({
