@@ -19,7 +19,8 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
-    "react/prefer-stateless-function":"off"
+    "react/prefer-stateless-function":"off",
+    "react/no-unknown-property":"off"
   },
   "ignorePatterns": [
     "dist/",

@@ -1,13 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap");
-@import url("http://fonts.cdnfonts.com/css/gill-sans");
-
-p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  color: #fff;
-}
+@use 'base';
 
 body {
   font: 100% "Gill Sans", sans-serif;
@@ -32,19 +23,19 @@ a {
   align-items: center;
   height: 40px;
   padding: 0 3%;
-  background-color: #d04379;
-  color: #fff;
-  font: 100% "Lato", sans-serif;
-}
+  background-color: base.$secondary-color;
+  color: base.$text-color;
+  font: 100% base.$control-font;
 
-.navbar .icon-menu {
-  display: flex;
-  gap: 10px;
+  .icon-menu {
+    display: flex;
+    gap: 10px;
+  }
 }
 
 .header-container {
   height: 200px;
-  background-image: url("../images/world-map.png");
+  background-image: url('../images/world-map.png');
   background-size: 120% 130%;
   background-position: center;
   position: relative;
@@ -52,13 +43,13 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: base.$text-color;
 }
 
 .header-container::before {
-  background-color: #d04379;
+  background-color: base.$secondary-color;
   opacity: 0.7;
-  content: "";
+  content: '';
   display: block;
   height: 100%;
   position: absolute;
@@ -71,64 +62,64 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: base.$text-color;
 }
 
 .h-title {
-  font: 2em "Gill Sans", sans-serif;
+  font: 2em base.$title-font;
 }
 
 .h-subtitle {
-  font: 1em "Gill Sans", sans-serif;
+  font: 1em base.$title-font;
 }
 
 .title {
   height: 25px;
-  background-color: #d04379;
+  background-color: base.$secondary-color;
   display: flex;
   align-content: center;
   justify-content: space-between;
   padding: 0 1%;
-}
 
-.title .filter {
-  border: 0;
-  width: 75%;
-  background-color: #d04379;
-  margin: 2.5px 0;
-  border-radius: 5px;
-  color: #fff;
-}
+  .filter {
+    border: 0;
+    width: 75%;
+    background-color: base.$secondary-color;
+    margin: 2.5px 0;
+    border-radius: 5px;
+    color: base.$text-color;
+  }
 
-.title .filter:focus {
-  outline: none;
-}
+  .filter:focus {
+    outline: none;
+  }
 
-.title .filter::placeholder {
-  color: #ee8fb5;
-}
+  .filter::placeholder {
+    color: base.$text-color2;
+  }
 
-.title p {
-  width: 25%;
-  font-size: 1.2em;
-  color: #fff;
+  p {
+    width: 25%;
+    font-size: 1.2em;
+    color: base.$text-color;
+  }
 }
 
 .countries {
   height: 300px;
-  background-color: #fc5293;
+  background-color: base.$primary-color;
   display: flex;
   flex-wrap: wrap;
 }
 
 .country-card {
   width: 50%;
-  background-color: #db4781;
-  cursor: url("../images/cursor.PNG"), auto;
+  background-color: base.$secondary-color-dark;
+  cursor: url('../images/cursor.PNG'), auto;
 }
 
 .country-card:hover {
-  background-color: #d04379;
+  background-color: base.$secondary-color;
 }
 
 .card-up {
@@ -136,18 +127,18 @@ a {
   display: flex;
   height: 60%;
   padding: 2%;
-}
 
-.card-up img {
-  width: 70%;
-  opacity: 0.3;
-}
+  img {
+    width: 70%;
+    opacity: 0.3;
+  }
 
-.card-up .forward-icon {
-  display: flex;
-  width: 20%;
-  justify-content: flex-end;
-  color: #fff;
+  .forward-icon {
+    display: flex;
+    width: 20%;
+    justify-content: flex-end;
+    color: base.$text-color;
+  }
 }
 
 .country-name {
@@ -158,20 +149,20 @@ a {
 
 .cities {
   height: 300px;
-  background-color: #fc5293;
+  background-color: base.$primary-color;
 }
 
 .city-card {
   width: 100%;
-  background-color: #db4781;
-  cursor: url("../images/cursor.PNG"), auto;
+  background-color: base.$secondary-color-dark;
+  cursor: url('../images/cursor.PNG'), auto;
   display: flex;
   justify-content: space-between;
   height: 70px;
 }
 
 .city-card:hover {
-  background-color: #d04379;
+  background-color: base.$secondary-color;
 }
 
 .city-name {
@@ -186,7 +177,7 @@ a {
 }
 
 .airData {
-  background-color: #fc5293;
+  background-color: base.$primary-color;
   color: #fff;
   padding: 5px;
 }
