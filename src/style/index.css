@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap");
+@import url("http://fonts.cdnfonts.com/css/gill-sans");
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  color: #fff;
+}
+
+body {
+  font: 100% "Gill Sans", sans-serif;
+  margin: 0;
+  background-color: #fc5293;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 3%;
+  background-color: #d04379;
+  color: #fff;
+  font: 100% "Lato", sans-serif;
+}
+
+.navbar .icon-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.header-container {
+  height: 200px;
+  background-image: url("../images/world-map.png");
+  background-size: 120% 130%;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.header-container::before {
+  background-color: #d04379;
+  opacity: 0.7;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.header {
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.h-title {
+  font: 2em "Gill Sans", sans-serif;
+}
+
+.h-subtitle {
+  font: 1em "Gill Sans", sans-serif;
+}
+
+.title {
+  height: 25px;
+  background-color: #d04379;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 1%;
+}
+
+.title .filter {
+  border: 0;
+  width: 75%;
+  background-color: #d04379;
+  margin: 2.5px 0;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.title .filter:focus {
+  outline: none;
+}
+
+.title .filter::placeholder {
+  color: #ee8fb5;
+}
+
+.title p {
+  width: 25%;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.countries {
+  height: 300px;
+  background-color: #fc5293;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.country-card {
+  width: 50%;
+  background-color: #db4781;
+  cursor: url("../images/cursor.PNG"), auto;
+}
+
+.country-card:hover {
+  background-color: #d04379;
+}
+
+.card-up {
+  width: 100%;
+  display: flex;
+  height: 60%;
+  padding: 2%;
+}
+
+.card-up img {
+  width: 70%;
+  opacity: 0.3;
+}
+
+.card-up .forward-icon {
+  display: flex;
+  width: 20%;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.country-name {
+  font-size: 2rem;
+  text-align: right;
+  padding: 0 2%;
+}
+
+.cities {
+  height: 300px;
+  background-color: #fc5293;
+}
+
+.city-card {
+  width: 100%;
+  background-color: #db4781;
+  cursor: url("../images/cursor.PNG"), auto;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.city-card:hover {
+  background-color: #d04379;
+}
+
+.city-name {
+  font-size: 2.2rem;
+  text-align: right;
+  padding: 0 2%;
+}
+
+.message {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.airData {
+  background-color: #fc5293;
+  color: #fff;
+  padding: 5px;
+}
+
+.a-subtitle {
+  font-size: 1.5rem;
+}
+
+.back {
+  color: #fff;
+}

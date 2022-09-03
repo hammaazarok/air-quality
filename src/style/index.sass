@@ -1,0 +1,191 @@
+@use 'base';
+
+body {
+  font: 100% "Gill Sans", sans-serif;
+  margin: 0;
+  background-color: #fc5293;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 3%;
+  background-color: base.$secondary-color;
+  color: base.$text-color;
+  font: 100% base.$control-font;
+
+  .icon-menu {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.header-container {
+  height: 200px;
+  background-image: url('../images/world-map.png');
+  background-size: 120% 130%;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: base.$text-color;
+}
+
+.header-container::before {
+  background-color: base.$secondary-color;
+  opacity: 0.7;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.header {
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: base.$text-color;
+}
+
+.h-title {
+  font: 2em base.$title-font;
+}
+
+.h-subtitle {
+  font: 1em base.$title-font;
+}
+
+.title {
+  height: 25px;
+  background-color: base.$secondary-color;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 1%;
+
+  .filter {
+    border: 0;
+    width: 75%;
+    background-color: base.$secondary-color;
+    margin: 2.5px 0;
+    border-radius: 5px;
+    color: base.$text-color;
+  }
+
+  .filter:focus {
+    outline: none;
+  }
+
+  .filter::placeholder {
+    color: base.$text-color2;
+  }
+
+  p {
+    width: 25%;
+    font-size: 1.2em;
+    color: base.$text-color;
+  }
+}
+
+.countries {
+  height: 300px;
+  background-color: base.$primary-color;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.country-card {
+  width: 50%;
+  background-color: base.$secondary-color-dark;
+  cursor: url('../images/cursor.PNG'), auto;
+}
+
+.country-card:hover {
+  background-color: base.$secondary-color;
+}
+
+.card-up {
+  width: 100%;
+  display: flex;
+  height: 60%;
+  padding: 2%;
+
+  img {
+    width: 70%;
+    opacity: 0.3;
+  }
+
+  .forward-icon {
+    display: flex;
+    width: 20%;
+    justify-content: flex-end;
+    color: base.$text-color;
+  }
+}
+
+.country-name {
+  font-size: 2rem;
+  text-align: right;
+  padding: 0 2%;
+}
+
+.cities {
+  height: 300px;
+  background-color: base.$primary-color;
+}
+
+.city-card {
+  width: 100%;
+  background-color: base.$secondary-color-dark;
+  cursor: url('../images/cursor.PNG'), auto;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.city-card:hover {
+  background-color: base.$secondary-color;
+}
+
+.city-name {
+  font-size: 2.2rem;
+  text-align: right;
+  padding: 0 2%;
+}
+
+.message {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.airData {
+  background-color: base.$primary-color;
+  color: #fff;
+  padding: 5px;
+}
+
+.a-subtitle {
+  font-size: 1.5rem;
+}
+
+.back {
+  color: #fff;
+}

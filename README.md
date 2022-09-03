@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Air-Quality
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web app that provides users with air quality rates and pollutant concentration
 
-## Available Scripts
+## Built With
 
-In the project directory, you can run:
+- **Languages**
 
-### `npm start`
+  - *HTML*
+  - *CSS*
+  - *JavaScript*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Library/Frameworks**
+   - *React*
+   - *Redux*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **APIs**
+    - [Geo Graph API](https://www.universal-tutorial.com/api/)
+    - [openWeather](https://openweathermap.org/api)
+    
+ 
+## Live Demo Link
+ Live Demo Here :   [Air-Quality](https://air-quality-ha.netlify.app)
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+have a working git on your localmachine.
 
-### `npm run build`
+## Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Installation & Set Up
+To get a working local copy up and running follow these simple steps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- open terminal
+- clone this project with the command:
 
-### `npm run eject`
+```
+$ git clone https://github.com/hammaazarok/air-quality.git
+```
+1. Install Node Modules
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```sh
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Start the development server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
-## Learn More
+## 🚀 Building and Running for Production
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Generate a full static production build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```sh
+   npm run build
+   ```
+### Usage
+For anyone that whats to learn React, Redux or working with APIs
 
-### Code Splitting
+### Run tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Test the application with this command
 
-### Analyzing the Bundle Size
+```
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Authors
 
-### Making a Progressive Web App
+👤 **Hamma Azarok**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- GitHub: [@hammaazarok](https://github.com/hammaazarok)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hammaazarok/)
+ 
+## 🤝 Contributing
 
-### Advanced Configuration
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Feel free to check the [issues page](https://github.com/PinkMoon25/Math-magicians/issues/).
 
-### Deployment
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Microverse ⚡
+- Credits to [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) for the original design idea.
+- Credirts to  [Mazarin](https://github.com/djaiss/mapsicon) for the countries maps.
 
-### `npm run build` fails to minify
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
