@@ -93,7 +93,7 @@ a {
 
 .title .filter {
   border: 0;
-  width: 75%;
+  width: 70%;
   background-color: #d04379;
   margin: 2.5px 0;
   border-radius: 5px;
@@ -109,8 +109,8 @@ a {
 }
 
 .title p {
-  width: 25%;
-  font-size: 1.2em;
+  width: 30%;
+  font-size: 1em;
   color: #fff;
 }
 
@@ -151,7 +151,7 @@ a {
 }
 
 .country-name {
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-align: right;
   padding: 0 2%;
 }

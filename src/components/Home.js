@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { API_URL, API_TOKEN } from '../api/cities';
+import { API_URL } from '../api/cities';
 import { Arrow } from './Icons';
 
 function Home() {
@@ -9,26 +9,20 @@ function Home() {
   const [tokenExpired, setValue] = useState(false);
 
   useEffect(() => {
-    fetch(`${API_URL}/countries/`, {
-      method: 'GET',
-      headers: {
-        Accept: 'application/json',
-        Authorization: `Bearer ${API_TOKEN}`,
-      },
-    }).then((res) => res.json()).then((json) => {
+    fetch(`${API_URL}/countries/iso`).then((res) => res.json()).then((json) => {
       if (json.error !== undefined) {
         if (json.error.message === 'jwt expired') {
           setValue(true);
         }
       }
-      getCountries(json);
-      filterCountries(json);
+      getCountries(json.data);
+      filterCountries(json.data);
     });
   }, []);
 
   const handleSearch = (e) => {
     const filterd = countries.filter(
-      (c) => c.country_name.toLowerCase().includes(e.target.value.toLowerCase()),
+      (c) => c.name.toLowerCase().includes(e.target.value.toLowerCase()),
     );
     filterCountries(filterd);
   };
@@ -63,12 +57,12 @@ function Home() {
       </div>
       <div className="countries">
         {filterd !== null ? filterd.map((c) => (
-          <Link className="country-card" key={c.country_name} to={`/cities/${c.country_name}`}>
+          <Link className="country-card" key={c.name} to={`/cities/${c.name}`}>
             <div className="card-up">
-              <img src={`./images/countries/${c.country_short_name.toLowerCase()}/512.png`} alt="" />
+              <img src={`./images/countries/${c.Iso2.toLowerCase()}/512.png`} alt="" />
               <div className="forward-icon"><Arrow /></div>
             </div>
-            <p className="country-name">{c.country_name}</p>
+            <p className="country-name">{c.name}</p>
           </Link>
 
         )) : ''}

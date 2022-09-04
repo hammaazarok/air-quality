@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-import { API_TOKEN, API_URL } from '../api/cities';
+import { API_URL } from '../api/cities';
 import { LoadCities, loadStates, ResetStates } from '../redux/cities/cities';
 
 function Cities() {
@@ -16,16 +16,19 @@ function Cities() {
   }, []);
   const handleSelect = (e) => {
     const state = e.target.options[e.target.selectedIndex].text;
-    fetch(`${API_URL}/cities/${state}`, {
-      method: 'GET',
+    fetch(`${API_URL}/countries/state/cities`, {
+      method: 'POST',
       headers: {
-        Accept: 'application/json',
-        Authorization: `Bearer ${API_TOKEN}`,
+        'Content-Type': 'application/json',
       },
+      body: JSON.stringify({
+        country,
+        state,
+      }),
     }).then((res) => res.json()).then((json) => {
       const citiess = [];
-      json.map(async (e) => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e.city_name},${country}&appid=daa552ce23205ff48e971f0523fe9102`)
+      json.data.forEach(async (e) => {
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e},${country}&appid=daa552ce23205ff48e971f0523fe9102`)
           .then((res) => res.json())
           .then(async (json) => {
             if (json.cod !== '404') {
@@ -60,7 +63,7 @@ function Cities() {
         <p>CITIES BY STATE</p>
         <select onChange={handleSelect} className="filter">
           {states.map((s) => (
-            <option Key={s.state_name} value={s.state_name}>{s.state_name}</option>
+            <option Key={s.name} value={s.name}>{s.name}</option>
           ))}
           ;
         </select>
