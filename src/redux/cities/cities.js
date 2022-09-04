@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { API_TOKEN, API_URL } from '../../api/cities';
+import { API_URL } from '../../api/cities';
 
 // Actions
 const LOAD_STATES = 'LOAD_STATES';
@@ -8,7 +8,7 @@ const LOAD_CITIES = 'LOAD_CITIES';
 const LOAD_DETAILS = 'LOAD_DETAILS';
 const initialState = {
   states: [
-    { state_name: 'loading states ...' },
+    { name: 'loading states ...' },
   ],
   cities: ['init'],
   data: {
@@ -65,14 +65,16 @@ export default function citiesReducer(state = initialState, action = { payload: 
 
 // Action Creators
 
-export const loadStates = createAsyncThunk(LOAD_STATES, async (country) => fetch(`${API_URL}/states/${country}`, {
-  method: 'GET',
+export const loadStates = createAsyncThunk(LOAD_STATES, async (country) => fetch(`${API_URL}/countries/states`, {
+  method: 'POST',
   headers: {
-    Accept: 'application/json',
-    Authorization: `Bearer ${API_TOKEN}`,
+    'Content-Type': 'application/json',
   },
+  body: JSON.stringify({
+    country,
+  }),
 }).then((res) => res.json())
-  .then((json) => json));
+  .then((json) => json.data.states));
 
 export const LoadCities = (value) => ({ type: LOAD_CITIES, payload: value });
 export const ResetStates = (value) => ({ type: RESET_STATES, payload: value });
